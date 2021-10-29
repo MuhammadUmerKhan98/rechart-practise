@@ -1,40 +1,32 @@
 import React, { useState } from "react";
 import { DatePicker } from "antd";
+import moment from "moment";
+import styled from "styled-components";
+
 import "./datePicker.css";
 
 const { RangePicker } = DatePicker;
 
 const DatePickerComp = () => {
-  // const [dates, setDates] = useState([]);
-  // const [hackValue, setHackValue] = useState();
-  // const [value, setValue] = useState();
-  // const disabledDate = (current) => {
-  //   if (!dates || dates.length === 0) {
-  //     return false;
-  //   }
-  //   const tooLate = dates[0] && current.diff(dates[0], "days") > 7;
-  //   const tooEarly = dates[1] && dates[1].diff(current, "days") > 7;
-  //   return tooEarly || tooLate;
-  // };
-
-  // const onOpenChange = (open) => {
-  //   if (open) {
-  //     setHackValue([]);
-  //     setDates([]);
-  //   } else {
-  //     setHackValue(undefined);
-  //   }
-  // };
+  function disabledDate(current) {
+    return (
+      current < moment().subtract(2, "months") ||
+      !(current < moment().subtract(1, "months")) ||
+      current > moment().add(0, "days") // after current
+    );
+  }
 
   return (
-    <RangePicker
-    // value={hackValue || value}
-    // disabledDate={disabledDate}
-    // onCalendarChange={(val) => setDates(val)}
-    // onChange={(val) => setValue(val)}
-    // onOpenChange={onOpenChange}
+    <StyledRangePicker
+      // value={hackValue || value}
+      disabledDate={disabledDate}
+      // onCalendarChange={(val) => setDates(val)}
+      // onChange={(val) => setValue(val)}
+      // onOpenChange={onOpenChange}
     />
   );
 };
 
 export default DatePickerComp;
+
+const StyledRangePicker = styled(RangePicker)``;
