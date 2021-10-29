@@ -33,12 +33,9 @@ const StyledCard = styled.div`
   background-color: #fff;
   display: grid;
   justify-content: center;
-  width: 550px;
-  // border: 1px solid #000;
-  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
-
+  width: 720px;
   padding: 0px;
-  border-radius: 15px;
+  border-radius: 4px;
 `;
 
 const Actuals = styled.p`

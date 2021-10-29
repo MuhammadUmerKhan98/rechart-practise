@@ -127,8 +127,8 @@ const AdminChart = () => {
         <DatePicker />
       </PeriodDiv>
       <LineChart
-        width={500}
-        height={300}
+        width={700}
+        height={400}
         data={data}
         margin={{
           top: 5,
@@ -137,7 +137,7 @@ const AdminChart = () => {
           bottom: 5,
         }}
       >
-        {/* <CartesianGrid strokeDasharray="3 3" /> */}
+        <CartesianGrid vertical={false} strokeDasharray="3" strokeWidth={1} />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
