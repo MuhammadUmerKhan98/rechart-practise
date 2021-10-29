@@ -91,6 +91,7 @@ const data = [
     name: "Feb 2021",
     Period: 230,
     Actuals: 220,
+    Year: 50,
     amt: 200,
   },
   {
@@ -98,18 +99,21 @@ const data = [
     Period: 150,
     Actuals: 220,
     amt: 200,
+    Year: 80,
   },
   {
     name: "Mar 2021",
     Period: 450,
     Actuals: 160,
     amt: 200,
+    Year: 20,
   },
   {
     name: "Mar 2021",
     Period: 100,
     Actuals: 150,
     amt: 200,
+    Year: 450,
   },
 ];
 
@@ -145,6 +149,7 @@ const AdminChart = () => {
           activeDot={{ r: 8 }}
         />
         <Line type="monotone" dataKey="Period" stroke="#ff8cae" />
+        <Line type="monotone" dataKey="Year" stroke="#66b9fa" />
       </LineChart>
     </>
   );
