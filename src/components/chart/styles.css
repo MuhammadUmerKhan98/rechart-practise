@@ -6,3 +6,21 @@
 .recharts-default-legend {
   text-align: right !important;
 }
+
+.recharts-dot {
+  display: none;
+}
+
+.recharts-line-curve {
+  stroke-width: 3px;
+}
+
+.ant-picker-focused,
+.ant-picker:hover,
+.ant-picker-focused {
+  border-color: #ffaaff !important;
+}
+
+.ant-tabs-ink-bar {
+  display: none;
+}

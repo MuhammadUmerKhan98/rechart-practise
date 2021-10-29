@@ -133,7 +133,7 @@ const AdminChart = () => {
           bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        {/* <CartesianGrid strokeDasharray="3 3" /> */}
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
@@ -141,7 +141,7 @@ const AdminChart = () => {
         <Line
           type="monotone"
           dataKey="Actuals"
-          stroke="#66b9fa"
+          stroke="#74d5e9"
           activeDot={{ r: 8 }}
         />
         <Line type="monotone" dataKey="Period" stroke="#ff8cae" />
