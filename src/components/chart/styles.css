@@ -32,3 +32,7 @@
 .ant-picker-focused {
   box-shadow: none !important;
 }
+
+.recharts-default-tooltip {
+  border-radius: 10px !important;
+}

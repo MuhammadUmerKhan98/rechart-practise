@@ -10,9 +10,9 @@ const { RangePicker } = DatePicker;
 const DatePickerComp = () => {
   function disabledDate(current) {
     return (
-      current < moment().subtract(2, "months") ||
-      !(current < moment().subtract(1, "months")) ||
-      current > moment().add(0, "days") // after current
+      current < moment().subtract(1, "days") ||
+      // !(current < moment().subtract(1, "months")) ||
+      current > moment().add(1, "months") // after current
     );
   }
 
