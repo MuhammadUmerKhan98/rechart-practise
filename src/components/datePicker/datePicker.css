@@ -44,9 +44,9 @@
   display: none;
 }
 
-/* .recharts-surface {
-  visibility: none !important;
-} */
+.recharts-surface {
+  padding: 10px 20px 0px 0px !important;
+}
 
 .recharts-legend-wrapper ul li {
   display: none !important;

@@ -119,12 +119,15 @@ const data = [
 
 const AdminChart = () => {
   return (
-    <>
+    <StyledDiv>
       <PeriodDiv>
+        <StatusDiv>
+          <StatusPara>[Forecast vs. Actuals]</StatusPara>
+        </StatusDiv>
         <LabelDiv>
           <StyledPara>Period: </StyledPara>
+          <DatePicker />
         </LabelDiv>
-        <DatePicker />
       </PeriodDiv>
       <LineChart
         width={700}
@@ -151,23 +154,35 @@ const AdminChart = () => {
         <Line type="monotone" dataKey="Period" stroke="#ff8cae" />
         <Line type="monotone" dataKey="Year" stroke="#66b9fa" />
       </LineChart>
-    </>
+    </StyledDiv>
   );
 };
 
 export default AdminChart;
 
+const StyledDiv = styled.div`
+  p {
+    margin-top: 14px !important;
+    margin-bottom: none !important;
+  }
+`;
+
 const PeriodDiv = styled.div`
-  display: flex;
-  justify-content: right;
-  padding: 10px;
+  display: flex !important;
+  padding: 10px 0 0 20px !important;
 `;
 
 const LabelDiv = styled.div`
-  display: flex;
-  text-align: center;
+  display: flex !important;
+  width: 80% !important;
+  justify-content: end;
 `;
 
-const StyledPara = styled.p`
-  margin: 10px !important;
+const StatusDiv = styled.div``;
+
+const StyledPara = styled.p``;
+
+const StatusPara = styled.p`
+  font-weight: bolder !important;
+  font-size: 12px !important;
 `;

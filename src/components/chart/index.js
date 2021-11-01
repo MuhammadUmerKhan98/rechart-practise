@@ -8,7 +8,13 @@ const Chart = () => {
     <>
       <StyledCard>
         <AdminChart />
-        <Row style={{ display: "flex", justifyContent: "end" }}>
+        <Row
+          style={{
+            display: "flex",
+            justifyContent: "end",
+            padding: "10px 10px",
+          }}
+        >
           <Actuals>
             <Badge color={"#6ecbde"} />
             Actuals
@@ -35,7 +41,7 @@ const StyledCard = styled.div`
   justify-content: center;
   width: 720px;
   padding: 0px;
-  border-radius: 4px;
+  border-radius: 10px;
 `;
 
 const Actuals = styled.p`
