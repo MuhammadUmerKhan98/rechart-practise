@@ -4,36 +4,36 @@
 
 .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
 .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner {
-  background-color: #c266ec !important;
+  background-color: #393ba3 !important;
   border-radius: 50px !important;
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
-  background-color: #c266ec !important;
+  background-color: #393ba3 !important;
   border-radius: 50px !important;
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
-  background: #faf0fd !important;
+  background: #f0f0fa !important;
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before {
-  background: #faf0fd !important;
+  background: #f0f0fa !important;
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
-  background: #faf0fd !important;
+  background: #f0f0fa !important;
 }
 .ant-picker-date-panel
   .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start
   .ant-picker-cell-inner::after {
-  background: #faf0fd !important;
+  background: #f0f0fa !important;
 }
 
 .ant-picker-date-panel
   .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end
   .ant-picker-cell-inner::after {
-  background: #faf0fd !important;
+  background: #f0f0fa !important;
 }
 
 .recharts-cartesian-axis-tick-line {
@@ -49,5 +49,9 @@
 }
 
 .recharts-legend-wrapper ul li {
+  display: none !important;
+}
+
+.anticon-close-circle {
   display: none !important;
 }

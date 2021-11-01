@@ -16,11 +16,16 @@ const DatePickerComp = () => {
     );
   }
 
+  const [value, setValue] = useState();
+
+  console.log("value", value);
   return (
     <StyledRangePicker
+      // showTime={{ format: "hh:mma" }}
+      format="DD MMM YYYY"
       disabledDate={disabledDate}
       // onCalendarChange={(val) => setDates(val)}
-      // onChange={(val) => setValue(val)}
+      onChange={(val) => setValue(val)}
       // onOpenChange={onOpenChange}
     />
   );
