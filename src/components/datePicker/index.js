@@ -15,18 +15,9 @@ const DatePickerComp = () => {
       current > moment().add(1, "months") // after current
     );
   }
-  const dateFormat = "";
-
-  const currentDate = (current) => {
-    return current;
-  };
 
   return (
     <StyledRangePicker
-      defaultValue={[
-        moment("2019-09-03", dateFormat),
-        moment("2019-11-22", dateFormat),
-      ]}
       disabledDate={disabledDate}
       // onCalendarChange={(val) => setDates(val)}
       // onChange={(val) => setValue(val)}
