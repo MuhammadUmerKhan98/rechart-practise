@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DatePicker } from "antd";
 import moment from "moment";
 import styled from "styled-components";
@@ -19,6 +19,30 @@ const DatePickerComp = () => {
   const [value, setValue] = useState();
 
   console.log("value", value);
+
+  useEffect(() => {
+    // let abc = document.querySelector("ant-picker-dropdown-range");
+    // abc.addEventListener("click", alert("clicked"), false); // Add onclick eventListener
+    // var elements = document.getElementsByClassName("ant-picker-dropdown-range");
+    // var myFunction = function () {
+    //   var attribute = this.getAttribute("additional-panel");
+    //   alert(attribute);
+    // };
+    // for (var i = 0; i < elements.length; i++) {
+    //   elements[i].addEventListener("click", myFunction, false);
+    // }
+    // var element = document.getElementsByClassName(
+    //   "ant-picker-dropdown-range"
+    // )[0];
+    // element.addEventListener(
+    //   "click",
+    //   function (e) {
+    //     alert("something");
+    //   },
+    //   false
+    // );
+  }, []);
+
   return (
     <StyledRangePicker
       // showTime={{ format: "hh:mma" }}

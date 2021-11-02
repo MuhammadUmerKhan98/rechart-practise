@@ -11,6 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import DatePicker from "../datePicker";
+import UpperPanel from "../upperPanel";
 
 import styled from "styled-components";
 
@@ -120,6 +121,7 @@ const data = [
 const AdminChart = () => {
   return (
     <StyledDiv>
+      <UpperPanel />
       <PeriodDiv>
         <StatusDiv>
           <StatusPara>[Forecast vs. Actuals]</StatusPara>

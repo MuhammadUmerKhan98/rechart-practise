@@ -8,6 +8,9 @@ const Chart = () => {
     <>
       <StyledCard>
         <AdminChart />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <DividerDiv />
+        </div>
         <Row
           style={{
             display: "flex",
@@ -53,3 +56,9 @@ const Year = styled.p`
 `;
 
 const Period = styled.p``;
+
+const DividerDiv = styled.div`
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 650px;
+`;
