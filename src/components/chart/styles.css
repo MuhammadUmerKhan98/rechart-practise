@@ -42,3 +42,11 @@
 .recharts-default-tooltip {
   border-radius: 10px !important;
 }
+
+.recharts-tooltip-item-list {
+  display: flex !important;
+}
+
+.recharts-tooltip-item {
+  margin-right: 10px !important;
+}
