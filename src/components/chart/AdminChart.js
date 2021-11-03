@@ -142,7 +142,12 @@ const AdminChart = () => {
           bottom: 5,
         }}
       >
-        <CartesianGrid vertical={false} strokeDasharray="3" strokeWidth={1} />
+        <CartesianGrid
+          vertical={false}
+          //  strokeDasharray="3"
+          strokeDashoffset="3"
+          strokeWidth={1}
+        />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
