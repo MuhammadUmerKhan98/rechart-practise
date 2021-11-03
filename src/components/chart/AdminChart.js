@@ -121,7 +121,7 @@ const data = [
 const AdminChart = () => {
   return (
     <StyledDiv>
-      <UpperPanel />
+      {/* <UpperPanel /> */}
       <PeriodDiv>
         <StatusDiv>
           <StatusPara>[Forecast vs. Actuals]</StatusPara>
