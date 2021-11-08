@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import {
   LineChart,
@@ -12,6 +12,9 @@ import {
 } from "recharts";
 import DatePicker from "../datePicker";
 import UpperPanel from "../upperPanel";
+import { Button, Dropdown, Menu } from "antd";
+
+import { DownOutlined } from "@ant-design/icons";
 
 import styled from "styled-components";
 
@@ -119,6 +122,51 @@ const data = [
 ];
 
 const AdminChart = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("Clicked");
+    setShow(true);
+    if (show === true) setShow(false);
+  };
+
+  const menu = (
+    // <Menu>
+    //   <Menu.Item key="0">
+    //     <a href="https://www.antgroup.com">1st menu item</a>
+    //   </Menu.Item>
+    //   <Menu.Item key="1">
+    //     <a href="https://www.aliyun.com">2nd menu item</a>
+    //   </Menu.Item>
+    //   <Menu.Divider />
+    //   <Menu.Item key="3">3rd menu item</Menu.Item>
+    // </Menu>
+    <div
+      style={
+        {
+          // width: "520px",
+          // display: "flex",
+          // justifyContent: "start",
+        }
+      }
+    >
+      <div
+        style={{
+          border: "1px solid #000",
+          width: "512px",
+          display: "flex",
+          justifyContent: "space-between",
+          background: "#fff",
+          padding: "20px",
+        }}
+      >
+        <DatePicker />
+        <Button>Reset</Button>
+      </div>
+    </div>
+  );
+
   return (
     <StyledDiv>
       {/* <UpperPanel /> */}
@@ -128,7 +176,16 @@ const AdminChart = () => {
         </StatusDiv>
         <LabelDiv>
           <StyledPara>Period: </StyledPara>
-          <DatePicker />
+          {/* <Button onClick={handleClick}>Add</Button>
+          {show === true ? <div>Show</div> : null} */}
+          <Dropdown overlay={menu} trigger={["click"]}>
+            <a
+              className="ant-dropdown-link"
+              onClick={(e) => e.preventDefault()}
+            >
+              Select Date <DownOutlined />
+            </a>
+          </Dropdown>
         </LabelDiv>
       </PeriodDiv>
       <LineChart
@@ -172,6 +229,9 @@ const StyledDiv = styled.div`
     margin-top: 14px !important;
     margin-bottom: none !important;
   }
+  .recharts-tooltip-label {
+    margin-top: 0px !important;
+  }
 `;
 
 const PeriodDiv = styled.div`
@@ -187,7 +247,9 @@ const LabelDiv = styled.div`
 
 const StatusDiv = styled.div``;
 
-const StyledPara = styled.p``;
+const StyledPara = styled.p`
+  margin-right: 20px;
+`;
 
 const StatusPara = styled.p`
   font-weight: bolder !important;

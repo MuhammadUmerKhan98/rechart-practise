@@ -57,4 +57,8 @@ const DatePickerComp = () => {
 
 export default DatePickerComp;
 
-const StyledRangePicker = styled(RangePicker)``;
+const StyledRangePicker = styled(RangePicker)`
+  .ant-picker-header-view button:hover {
+    color: #000 !important;
+  }
+`;
