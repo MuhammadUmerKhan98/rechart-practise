@@ -1,7 +1,8 @@
 import "./App.css";
 import Chart from "./components/forecastVsActuals/chart";
 import ForecastStats from "./components/forecastStatistics/forecastStats";
-import DriverStats from "./components/driverStats";
+// import DriverStats from "./components/driverStats";
+import DriverStats from "./components/drivers";
 
 import styled from "styled-components";
 

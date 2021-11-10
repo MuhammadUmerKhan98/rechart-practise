@@ -6,9 +6,11 @@ const Header = () => {
   return (
     <StyledDiv>
       <PeriodDiv>
-        <StatusDiv>
-          <StatusPara>[Driver Stats]</StatusPara>
-        </StatusDiv>
+        <StatusPara>[Drivers]</StatusPara>
+        <StatusPara>
+          {"<"} Driver name [prism driver] {">"}
+        </StatusPara>
+        <StatusButton>Prism Driver</StatusButton>
       </PeriodDiv>
     </StyledDiv>
   );
@@ -21,21 +23,23 @@ const StyledDiv = styled.div`
     margin: 10px !important;
   }
   .ant-btn {
-    color: #393ba3 !important;
-    border-color: #393ba3 !important;
+    border: none !important;
+    background: #ebf4fe !important;
+    color: #69b0fa !important;
     height: 40px !important;
     border-radius: 5px !important;
   }
   .ant-btn:hover {
-    color: #393ba3 !important;
-    border-color: #393ba3 !important;
+    color: #69b0fa !important;
+    border-color: #69b0fa !important;
   }
 `;
 
 const PeriodDiv = styled.div`
   display: flex !important;
   width: 665px !important;
-  margin: 20px 0 0 30px !important;
+  margin: 20px 0 0 25px !important;
+  justify-content: space-between !important;
 `;
 
 const LabelDiv = styled.div`
@@ -44,7 +48,10 @@ const LabelDiv = styled.div`
   justify-content: end;
 `;
 
-const StatusDiv = styled.div``;
+const StatusDiv = styled.div`
+  display: flex !important;
+  justify-content: end !important;
+`;
 
 const StyledPara = styled.p`
   margin-right: 20px;
