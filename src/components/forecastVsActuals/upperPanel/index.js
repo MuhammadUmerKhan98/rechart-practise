@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, DatePicker } from "antd";
 import styled from "styled-components";
-import "./upperPanel.css";
 import { ArrowRightOutlined } from "@ant-design/icons";
 
 const UpperPanel = () => {

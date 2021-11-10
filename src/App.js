@@ -1,11 +1,12 @@
 import "./App.css";
-import Chart from "./components/chart";
+import Chart from "./components/forecastVsActuals/chart";
+import ForecastStats from "./components/forecastStatistics/forecastStats";
 import styled from "styled-components";
 
 function App() {
   return (
     <StyledDiv>
-      <Chart />
+      <ForecastStats />
     </StyledDiv>
   );
 }
